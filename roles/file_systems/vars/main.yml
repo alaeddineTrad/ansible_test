@@ -1,0 +1,19 @@
+---
+# vars file for file_systems
+SYS_SEC_3_4_A: ['SYS-SEC-3.4-A','FileSystems Mount points and options','',
+                '/home rw, nodev, nosuid   
+                /     rw                   
+                /tmp rw, nodev, nosuid, noexe
+                /usr ro, nodev          
+                /var rw, nodev, nosuid, noexe
+                /var/log/sudosh rw, nodev, nosuid, noexe
+                /boot ro                   
+                /opt/nagios rw, nodev
+                /srv/backup rw, nodev, nosuid, noexe
+                /pretupshome rw, nodev, nosuid
+                /pretupsvar rw, nodev, nosuid, noexe
+                /srv/orabin rw, nodev
+                /var/log/rhcs rw, nodev, noexec']
+SYS_SEC_3_5_A: ['SYS-SEC-3.5-A', 'Forbid common users to mount / unmount devices','grep "cdrom\|floppy" /etc/fstab | wc -l','0']
+SYS_SEC_3_6_A: ['SYS-SEC-3.6-A','Disable USB storage driver loading','','']
+SYS_SEC_3_7_A: ['SYS-SEC-3.7-A','Disable automatic mounting services','','']

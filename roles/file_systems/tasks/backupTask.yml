@@ -1,0 +1,21 @@
+---
+# tasks file for file_systems
+
+  vars:
+   ok: 'OK'
+   ko: 'KO'
+
+  tasks :
+        - name: print to stdout
+          command: bash -c "rpm -qa | grep dhc | wc -l"
+          register: staticip
+
+        - name: test result
+          set_fact:
+                 res : "{{ ok if (staticip.stdout != '0') else ko }}"
+
+
+        - debug:
+             var: res
+
+

@@ -1,0 +1,11 @@
+---
+# tasks file for file_systems
+- name: run the new module
+  system_check:
+   Requirement_Type: 'File_Systems'
+   Task_list: ["{{ SYS_SEC_3_4_A }}", "{{ SYS_SEC_3_5_A }}", "{{ SYS_SEC_3_6_A }}", "{{ SYS_SEC_3_7_A }}"]
+  register: testout
+
+- name: dump test output
+  debug:
+   msg: '{{ testout }}'

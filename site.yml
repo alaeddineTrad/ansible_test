@@ -1,0 +1,7 @@
+---
+- name: Check System
+  hosts: all
+  remote_user: root
+
+  roles: 
+        - file_systems
